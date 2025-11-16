@@ -32,8 +32,6 @@ Yapay zeka ile sıradan fotoğraflarınızı profesyonel iş fotoğraflarına d�
 2. Settings → API Tokens → Token oluştur
 3. Token'ı kopyala (`r8_...` ile başlar)
 
-![Replicate Token](./screenshots/replicate-token.png)
-
 ### 2. Backend Kurulumu
 
 ```bash
