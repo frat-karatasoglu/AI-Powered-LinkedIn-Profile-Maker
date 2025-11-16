@@ -155,10 +155,6 @@ git push origin feature/yeni-ozellik
 
 MIT License
 
-## ⭐ Destek
-
-Beğendiysen star vermeyi unutma!
-
 ---
 
-**Made with ❤️**
+**Made with ❤️*FIRAT KARATASOGLU*
