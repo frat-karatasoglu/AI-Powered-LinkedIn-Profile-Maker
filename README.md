@@ -20,7 +20,7 @@ Yapay zeka ile sıradan fotoğraflarınızı profesyonel iş fotoğraflarına d�
     <td><img src="./screenshots/register.png" alt="Kayıt" width="400"/><br/><b>Kayıt Ekranı</b></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="./screenshots/main-app.png" alt="Ana Uygulama" width="100%"/><br/><b>Ana Uygulama - Fotoğraf Oluşturma</b></td>
+    <td colspan="2"><img src="./screenshots/empty-state.png" alt="Ana Uygulama" width="100%"/><br/><b>Ana Uygulama - Fotoğraf Oluşturma</b></td>
   </tr>
 </table>
 
