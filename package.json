@@ -1,0 +1,40 @@
+{
+  "name": "ai-photo-studio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI Powered Professional Headshot Generator with Vite and React",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.38.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "vite": "^7.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frat-karatasoglu/AI-Powered-LinkedIn-Profile-Maker.git"
+  },
+  "keywords": [
+    "ai",
+    "professional-headshot",
+    "react",
+    "vite",
+    "replicate"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frat-karatasoglu/AI-Powered-LinkedIn-Profile-Maker/issues"
+  },
+  "homepage": "https://github.com/frat-karatasoglu/AI-Powered-LinkedIn-Profile-Maker#readme"
+}

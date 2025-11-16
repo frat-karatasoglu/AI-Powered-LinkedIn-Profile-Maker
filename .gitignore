@@ -1,0 +1,35 @@
+# .gitignore
+# Environment variables - ASLA GITHUB'A GÖNDERME!
+.env
+*.env
+.env.local
+.env.production
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+
+# Build
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package locks (opsiyonel)
+package-lock.json
