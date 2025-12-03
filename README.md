@@ -1,160 +1,204 @@
 # ✨ AI Professional Photo Studio
 
-Yapay zeka ile sıradan fotoğraflarınızı profesyonel iş fotoğraflarına dönüştürün!
+Transform your casual photos into professional headshots with AI!
 
-![Ana Uygulama](./screenshots/main-app.png)
+![Main App](./screenshots/main-app.png)
 
-## 🎯 Özellikler
+## 🎯 Features
 
-- 🤖 **Flux AI** ile profesyonel fotoğraf oluşturma
-- 👤 Kullanıcı girişi ve kredi sistemi (10 ücretsiz kredi)
-- 🎨 Cinsiyet ve arka plan özelleştirme (Nötr, Ofis, Dış Mekan, Stüdyo)
-- ⚡ 10-30 saniyede sonuç
-- 📱 Mobil uyumlu modern arayüz
+- 🤖 **Flux AI** powered professional photo generation
+- 👤 User authentication with credit system (10 free credits)
+- 🎨 Customizable gender and background options (Neutral, Office, Outdoor, Studio)
+- ⚡ Results in 10-30 seconds
+- 📱 Fully responsive modern UI
 
-## 📸 Ekran Görüntüleri
+## 📸 Screenshots
 
 <table>
   <tr>
-    <td><img src="./screenshots/login.png" alt="Giriş" width="400"/><br/><b>Giriş Ekranı</b></td>
-    <td><img src="./screenshots/register.png" alt="Kayıt" width="400"/><br/><b>Kayıt Ekranı</b></td>
+    <td><img src="./screenshots/login.png" alt="Login" width="400"/><br/><b>Login Screen</b></td>
+    <td><img src="./screenshots/register.png" alt="Register" width="400"/><br/><b>Register Screen</b></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="./screenshots/empty-state.png" alt="Ana Uygulama" width="100%"/><br/><b>Ana Uygulama - Fotoğraf Oluşturma</b></td>
+    <td colspan="2"><img src="./screenshots/main-app.png" alt="Main App" width="100%"/><br/><b>Main Application - Photo Generation</b></td>
   </tr>
 </table>
 
-## 🚀 Kurulum
+## 🚀 Quick Start
 
-### 1. Replicate API Key Al
+### Prerequisites
 
-1. [replicate.com](https://replicate.com/) → Kaydol
-2. Settings → API Tokens → Token oluştur
-3. Token'ı kopyala (`r8_...` ile başlar)
+- Node.js 18+ ([Download](https://nodejs.org/))
+- Python 3.9+ ([Download](https://www.python.org/))
+- Replicate account ([Sign up](https://replicate.com/))
 
-### 2. Backend Kurulumu
+### 1. Clone Repository
 
 ```bash
+git clone https://github.com/USERNAME/ai-photo-studio.git
+cd ai-photo-studio
+```
+
+### 2. Get Replicate API Key
+
+1. Go to [replicate.com](https://replicate.com/) and sign up
+2. Navigate to Account Settings → API Tokens
+3. Create a new token
+4. Copy the token (starts with `r8_...`)
+
+![Replicate Token](./screenshots/replicate-token.png)
+
+### 3. Backend Setup
+
+```
 cd backend
 
-# Virtual environment
+# Create virtual environment
 python -m venv venv
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # Mac/Linux
 
-# Paketleri yükle
+# Activate (Windows)
+venv\Scripts\activate
+
+# Activate (Mac/Linux)
+source venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 
-# .env dosyası oluştur
+# Create .env file
 copy .env.example .env  # Windows
 cp .env.example .env    # Mac/Linux
 ```
 
-**`.env` dosyasını düzenle:**
-```env
-REPLICATE_API_TOKEN=r8_buraya_senin_token_in
-JWT_SECRET_KEY=güçlü_bir_şifre_123456
+**Edit `.env` file:**
+```
+REPLICATE_API_TOKEN=r8_paste_your_token_here
+JWT_SECRET_KEY=strong_secret_key_123456
 ```
 
-**Veritabanını oluştur:**
-```bash
+**Create database:**
+```
 python
 >>> from server import app, db
 >>> with app.app_context(): db.create_all()
 >>> exit()
 ```
 
-**Başlat:**
-```bash
+**Start backend:**
+```
 python server.py
 ```
 
-### 3. Frontend Kurulumu
+### 4. Frontend Setup
 
-**Yeni terminal aç:**
+**Open new terminal:**
 ```bash
-# Paketleri yükle
+# Install dependencies
 npm install
 
-# Başlat
+# Start dev server
 npm run dev
 ```
 
-### 4. Tarayıcıda Aç
+### 5. Open in Browser
 
 ```
 http://localhost:3000
 ```
 
-## 🎨 Arka Plan Seçenekleri
+## 🎨 Background Options
 
-- ⚪ **Nötr** - Pasaport, resmi belgeler
-- 🏢 **Ofis** - LinkedIn, CV
-- 🌳 **Dış Mekan** - Sosyal medya
-- 📷 **Stüdyo** - Portfolio
+- ⚪ **Neutral** - Passport, official documents
+- 🏢 **Office** - LinkedIn, CV, job applications
+- 🌳 **Outdoor** - Social media, website
+- 📷 **Studio** - Portfolio, agency applications
 
-## 🛠️ Teknolojiler
+## 🛠️ Tech Stack
 
 **Backend:** Flask, SQLAlchemy, JWT, Replicate API  
 **Frontend:** React, Vite, Axios  
 **AI Model:** Flux-Kontext Professional Headshot
 
-## 🐛 Sorun mu Var?
+## 📖 Usage
 
-**Backend çalışmıyor:**
+1. **Register** - Sign up and get 10 free credits
+2. **Upload Photo** - Choose a clear photo showing your face
+3. **Select Options** - Choose gender and background
+4. **Generate** - Wait 10-30 seconds (uses 1 credit)
+5. **Download** - Save your professional photo
+
+## 🐛 Troubleshooting
+
+**Backend not working:**
 ```bash
-# Virtual environment aktif mi kontrol et
 deactivate
-venv\Scripts\activate
+venv\Scripts\activate  # Windows
+source venv/bin/activate  # Mac/Linux
 python server.py
 ```
 
-**Frontend çalışmıyor:**
+**Frontend not working:**
 ```bash
-# Temizle ve yeniden yükle
 rm -rf node_modules package-lock.json
 npm install
 npm run dev
 ```
 
-**API Token hatası:**
+**API Token error:**
 ```bash
-# .env dosyası backend/ klasöründe mi?
+# Check if .env exists in backend/
 cat backend/.env  # Mac/Linux
 type backend\.env  # Windows
 ```
 
-## 📦 Deploy (Render.com)
+**Database error:**
+```bash
+cd backend
+rm site.db
+python
+>>> from server import app, db
+>>> with app.app_context(): db.create_all()
+```
 
-### Backend:
-1. render.com → "Web Service"
+## 📦 Deployment
+
+### Render.com (Free)
+
+**Backend:**
+1. render.com → "New Web Service"
 2. Root: `backend`
 3. Build: `pip install -r requirements.txt`
 4. Start: `gunicorn server:app`
 5. Env vars: `REPLICATE_API_TOKEN`, `JWT_SECRET_KEY`
 
-### Frontend:
-1. render.com → "Static Site"
+**Frontend:**
+1. render.com → "New Static Site"
 2. Build: `npm install && npm run build`
 3. Publish: `dist`
 
-## 💰 Maliyet
+## 💰 Cost
 
 - Replicate: ~$0.005 per image
-- Render: Ücretsiz tier (750 saat/ay)
+- Render: Free tier (750 hours/month)
 
-## 🤝 Katkıda Bulun
+## 🤝 Contributing
 
 ```bash
-git checkout -b feature/yeni-ozellik
-git commit -m 'Yeni özellik eklendi'
-git push origin feature/yeni-ozellik
+git checkout -b feature/amazing-feature
+git commit -m 'Add amazing feature'
+git push origin feature/amazing-feature
 ```
 
-## 📄 Lisans
+Open a Pull Request!
 
-MIT License
+## 📄 License
+
+MIT License - Use freely!
+
+## ⭐ Support
+
+If you like this project, give it a star!
 
 ---
 
-**Made with ❤️*FIRAT KARATASOGLU*
+**Made with ❤️ by Fırat Karataşoğlu**
